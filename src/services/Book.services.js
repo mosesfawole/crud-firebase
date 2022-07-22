@@ -15,11 +15,11 @@ class BookDataService {
   addBooks = (newBook) => {
     return addDoc(bookCollectionRef, newBook);
   };
-  updateBooks = (id, updatedBook) => {
+  updateBook = (id, updatedBook) => {
     const bookDoc = doc(db, "books", id);
     return updateDoc(bookDoc, updatedBook);
   };
-  deleteBooks = (id) => {
+  deleteBook = (id) => {
     const bookDoc = doc(db, "books", id);
     return deleteDoc(bookDoc);
   };
